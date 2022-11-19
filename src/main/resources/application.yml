@@ -1,0 +1,24 @@
+#服务路径、端口号配置
+server:
+  port: 9998
+  servlet:
+    context-path: /simples
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

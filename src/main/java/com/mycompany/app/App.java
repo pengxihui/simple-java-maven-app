@@ -1,21 +1,21 @@
 package com.mycompany.app;
 
-/**
- * Hello world!
- */
-public class App
-{
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-    private final String message = "Hello World!";
-
-    public App() {}
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@EnableScheduling
+@EnableAsync
+@EnableCaching
+public class App {
 
     public static void main(String[] args) {
-        System.out.println(new App().getMessage());
-    }
-
-    private final String getMessage() {
-        return message;
+        SpringApplication.run(App.class, args);
     }
 
 }
+
